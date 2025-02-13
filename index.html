@@ -4,40 +4,62 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Think Technically</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <link rel="stylesheet" href="styles/style.css">
-    <link rel="stylesheet" href="styles/animations.css">
 </head>
 <body>
-    <header class="hero">
+    <!-- Dark Mode Toggle -->
+    <button id="dark-mode-toggle" class="dark-mode-toggle">🌓</button>
+
+    <!-- Floating Tech Background Elements -->
+    <div class="floating-gear"><i class="fas fa-cog"></i></div>
+    <div class="floating-code"><i class="fas fa-code"></i></div>
+
+    <!-- Navigation -->
+    <nav class="glass-nav">
+        <div class="logo">
+            <img src="images/logo.png" alt="Think Technically Logo">
+        </div>
+        <ul>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#videos">Videos</a></li>
+            <li><a href="#blog">Blog</a></li>
+            <li><a href="#about">About</a></li>
+        </ul>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
         <div class="hero-content">
-            <h1>Think Technically</h1>
-            <p>Your go-to place for tech tutorials, reviews, and more.</p>
-            <a href="https://youtube.com/@Think-Technically" target="_blank" class="cta-button">Subscribe</a>
+            <h1 class="animate-pop-in">THINK TECHNICALLY</h1>
+            <p class="animate-pop-in">Demystifying Tech, One Byte at a Time</p>
+            <a href="https://youtube.com/@Think-Technically" target="_blank" class="cta-button animate-pop-in">
+                <i class="fab fa-youtube"></i> Subscribe Now
+            </a>
         </div>
-    </header>
+        <div class="scroll-down"></div>
+    </section>
 
-    <section id="featured-videos" class="section">
-        <h2>Featured Videos</h2>
+    <!-- Video Grid Section -->
+    <section id="videos" class="section">
+        <h2 class="section-title">Latest Videos</h2>
         <div class="video-grid">
-            <iframe width="560" height="315" src="https://www.youtube.com/embed/VIDEO_ID_1" frameborder="0" allowfullscreen></iframe>
-            <iframe width="560" height="315" src="https://www.youtube.com/embed/VIDEO_ID_2" frameborder="0" allowfullscreen></iframe>
+            <div class="video-card glassmorphism">
+                <iframe src="https://www.youtube.com/embed/VIDEO_ID_1" frameborder="0" allowfullscreen></iframe>
+            </div>
+            <div class="video-card glassmorphism">
+                <iframe src="https://www.youtube.com/embed/VIDEO_ID_2" frameborder="0" allowfullscreen></iframe>
+            </div>
         </div>
     </section>
 
-    <section id="about-preview" class="section">
-        <h2>About Me</h2>
-        <p>Hi, I'm [Your Name], a tech enthusiast passionate about simplifying technology for everyone. Join me on this journey!</p>
-        <a href="about.html" class="cta-button">Learn More</a>
-    </section>
+    <!-- Social Links -->
+    <div class="social-links">
+        <a href="#" class="social-icon"><i class="fab fa-discord"></i></a>
+        <a href="#" class="social-icon"><i class="fab fa-github"></i></a>
+        <a href="#" class="social-icon"><i class="fab fa-twitter"></i></a>
+    </div>
 
-    <footer>
-        <p>Follow me on:
-            <a href="https://youtube.com/@Think-Technically">YouTube</a> |
-            <a href="https://twitter.com/yourhandle">Twitter</a> |
-            <a href="https://instagram.com/yourhandle">Instagram</a>
-        </p>
-    </footer>
-
-    <script src="scripts/dark-mode.js"></script>
+    <script src="scripts/script.js"></script>
 </body>
 </html>
