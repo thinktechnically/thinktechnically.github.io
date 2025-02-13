@@ -1,1 +1,17 @@
 
+body.dark-mode {
+    background-color: #121212;
+    color: #ffffff;
+}
+
+.dark-mode header.hero {
+    background-color: rgba(0, 0, 0, 0.7);
+}
+
+.dark-mode .cta-button {
+    background-color: #1e90ff;
+}
+
+.dark-mode footer {
+    background-color: #1a1a1a;
+}
