@@ -5,23 +5,56 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Videos - Think Technically</title>
     <link rel="stylesheet" href="styles/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
 <body>
-    <header class="hero">
-        <div class="hero-content">
-            <h1>Video Gallery</h1>
-            <p>Explore my latest tech tutorials and reviews.</p>
+    <!-- Navigation Bar -->
+    <nav class="glass-nav">
+        <div class="logo">
+            <img src="images/logo.png" alt="Think Technically Logo">
         </div>
-    </header>
+        <ul class="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="videos.html">Videos</a></li>
+            <li><a href="blog.html">Blog</a></li>
+            <li><a href="about.html">About</a></li>
+        </ul>
+        <div class="menu-toggle" id="mobile-menu">
+            <span class="bar"></span>
+            <span class="bar"></span>
+            <span class="bar"></span>
+        </div>
+    </nav>
 
-    <section id="video-gallery" class="section">
-        <h2>Featured Playlists</h2>
+    <!-- Video Gallery Section -->
+    <section id="videos" class="section">
+        <h2 class="section-title">Latest Videos</h2>
         <div class="video-grid">
-            <iframe width="560" height="315" src="https://www.youtube.com/embed/PLAYLIST_ID_1" frameborder="0" allowfullscreen></iframe>
-            <iframe width="560" height="315" src="https://www.youtube.com/embed/PLAYLIST_ID_2" frameborder="0" allowfullscreen></iframe>
+            <!-- Video 1 -->
+            <div class="video-card glassmorphism">
+                <iframe 
+                    src="https://www.youtube.com/embed/a44mk1-ToCw" 
+                    frameborder="0" 
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                    allowfullscreen>
+                </iframe>
+                <h3 class="video-title">Video Title 1</h3>
+            </div>
+
+            <!-- Video 2 -->
+            <div class="video-card glassmorphism">
+                <iframe 
+                    src="https://www.youtube.com/embed/qmluXhaB0wI" 
+                    frameborder="0" 
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                    allowfullscreen>
+                </iframe>
+                <h3 class="video-title">Video Title 2</h3>
+            </div>
         </div>
     </section>
 
+    <!-- Footer -->
     <footer>
         <p>Follow me on:
             <a href="https://youtube.com/@Think-Technically">YouTube</a> |
@@ -29,5 +62,7 @@
             <a href="https://instagram.com/yourhandle">Instagram</a>
         </p>
     </footer>
+
+    <script src="scripts/script.js"></script>
 </body>
 </html>

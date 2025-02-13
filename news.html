@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tech News - Daily Updates</title>
+    <link rel="stylesheet" href="styles/news.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <nav class="glass-nav">
+        <div class="logo">
+            <img src="images/logo.png" alt="Think Technically Logo">
+        </div>
+        <ul class="nav-links">
+            <li><a href="index.html"><i class="fas fa-home"></i> Home</a></li>
+            <li><a href="news.html"><i class="fas fa-news"></i> News</a></li>
+            <li><a href="videos.html"><i class="fas fa-video"></i> Videos</a></li>
+            <li><a href="blog.html"><i class="fas fa-blog"></i> Blog</a></li>
+            <li><a href="about.html"><i class="fas fa-user"></i> About</a></li>
+            <li><a href="index.html" class="back-home-button"><i class="fas fa-arrow-left"></i> Back to Home</a></li>
+        </ul>
+        <div class="menu-toggle" id="mobile-menu">
+            <span class="bar"></span>
+            <span class="bar"></span>
+            <span class="bar"></span>
+        </div>
+    </nav>
+    
+    <header class="news-header">
+
+        <h1>Latest Tech News</h1>
+        <p>Stay updated with the latest trends and innovations in technology.</p>
+    </header>
+
+    <section class="news-articles" id="news-articles">
+        <!-- Articles will be dynamically inserted here -->
+    </section>
+
+    <script>
+        const apiKey = '2c18a28d692547e2b65508d50545c597'; // Replace with your actual API key
+        const apiUrl = 'https://api.allorigins.win/get?url=' + encodeURIComponent('https://newsapi.org/v2/top-headlines?category=technology&apiKey=' + apiKey);
+
+        async function fetchArticles() {
+            try {
+                const response = await fetch(apiUrl);
+                const data = await response.json();
+                const articles = JSON.parse(data.contents).articles; // Parse the contents to get articles
+
+                console.log('API Response:', articles); // Log the API response
+                if (Array.isArray(articles) && articles.length > 0) {
+                    displayArticles(articles);
+                } else {
+                    console.error('No articles found or API response is empty');
+                }
+            } catch (error) {
+                console.error('Error fetching articles:', error);
+            }
+        }
+
+        function displayArticles(articles) {
+            const articlesContainer = document.getElementById('news-articles');
+            // Keep existing articles and append new ones
+            articles.forEach(article => {
+                // Check if the article already exists to avoid duplicates
+                if (!document.querySelector(`.news-article[data-url="${article.url}"]`)) {
+                    const articleElement = document.createElement('article');
+                    articleElement.classList.add('news-article');
+                    articleElement.setAttribute('data-url', article.url); // Add data attribute to check for duplicates
+                    articleElement.innerHTML = `
+                        <h2>${article.title}</h2>
+                        <img src="${article.urlToImage}" alt="${article.title}" class="article-image">
+                        <p>Published on: ${new Date(article.publishedAt).toLocaleDateString()}</p>
+                        <p>${article.description}</p>
+                        <a href="https://www.facebook.com/sharer/sharer.php?u=${encodeURIComponent(article.url)}" class="share-button" target="_blank"><i class="fab fa-facebook"></i> Share</a>
+                        <a href="https://twitter.com/intent/tweet?url=${encodeURIComponent(article.url)}&text=${encodeURIComponent(article.title)}" class="share-button" target="_blank"><i class="fab fa-twitter"></i> Tweet</a>
+
+                    `;
+                    articlesContainer.appendChild(articleElement);
+                }
+            }); // End of articles.forEach loop
+        }
+
+        fetchArticles(); // Initial fetch of articles
+
+        // Function to refresh articles every 5 minutes
+        setInterval(fetchArticles, 300000); // Refresh every 5 minutes
+    </script>
+
+</body>
+</html>

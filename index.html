@@ -15,49 +15,74 @@
     <div class="floating-gear"><i class="fas fa-cog"></i></div>
     <div class="floating-code"><i class="fas fa-code"></i></div>
 
-    <!-- Navigation -->
+    <!-- Navigation Bar -->
     <nav class="glass-nav">
         <div class="logo">
             <img src="images/logo.png" alt="Think Technically Logo">
         </div>
-        <ul>
-            <li><a href="#home">Home</a></li>
-            <li><a href="#videos">Videos</a></li>
-            <li><a href="#blog">Blog</a></li>
-            <li><a href="#about">About</a></li>
+        <ul class="nav-links">
+            <li><a href="index.html"><i class="fas fa-home"></i> Home</a></li>
+            <li><a href="news.html"><i class="fas fa-news"></i> News</a></li>
+            <li><a href="videos.html"><i class="fas fa-video"></i> Videos</a></li>
+            <li><a href="blog.html"><i class="fas fa-blog"></i> Blog</a></li>
+            <li><a href="about.html"><i class="fas fa-user"></i> About</a></li>
         </ul>
+        <div class="menu-toggle" id="mobile-menu">
+            <span class="bar"></span>
+            <span class="bar"></span>
+            <span class="bar"></span>
+        </div>
     </nav>
 
     <!-- Hero Section -->
     <section id="home" class="hero">
         <div class="hero-content">
+            <!-- Profile Photo -->
+            <div class="profile-photo">
+                <img src="images/profile.jpg" alt="Your Name">
+            </div>
             <h1 class="animate-pop-in">THINK TECHNICALLY</h1>
             <p class="animate-pop-in">Demystifying Tech, One Byte at a Time</p>
             <a href="https://youtube.com/@Think-Technically" target="_blank" class="cta-button animate-pop-in">
                 <i class="fab fa-youtube"></i> Subscribe Now
             </a>
         </div>
-        <div class="scroll-down"></div>
-    </section>
-
-    <!-- Video Grid Section -->
-    <section id="videos" class="section">
-        <h2 class="section-title">Latest Videos</h2>
-        <div class="video-grid">
-            <div class="video-card glassmorphism">
-                <iframe src="https://youtu.be/a44mk1-ToCw?feature=shared" frameborder="0" allowfullscreen></iframe>
-            </div>
-            <div class="video-card glassmorphism">
-                <iframe src="https://youtu.be/qmluXhaB0wI?feature=shared" frameborder="0" allowfullscreen></iframe>
-            </div>
+        <div class="scroll-down" onclick="scrollToSection('#videos')">
+            <span></span>
         </div>
     </section>
 
+    <!-- Video Gallery Section -->
+    <section id="videos" class="section">
+        <h2 class="section-title">Latest Videos</h2>
+        <div class="video-grid">
+            <!-- Video 1 -->
+            <div class="video-card glassmorphism">
+                <iframe 
+                   src="https://www.youtube.com/embed/a44mk1-ToCw" 
+                    frameborder="0" 
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                    allowfullscreen>
+                </iframe>
+            </div>
+
+            <!-- Video 2 -->
+            <div class="video-card glassmorphism">
+                <iframe 
+                    src="https://www.youtube.com/embed/qmluXhaB0wI" 
+                    frameborder="0" 
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                    allowfullscreen>
+                </iframe>
+            </div>
+        </div>
+    </section>
     <!-- Social Links -->
     <div class="social-links">
         <a href="#" class="social-icon"><i class="fab fa-discord"></i></a>
         <a href="#" class="social-icon"><i class="fab fa-github"></i></a>
         <a href="#" class="social-icon"><i class="fab fa-twitter"></i></a>
+        <a href="#" class="social-icon"><i class="fab fa-instagram"></i></a>
     </div>
 
     <script src="scripts/script.js"></script>

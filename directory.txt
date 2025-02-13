@@ -1,0 +1,23 @@
+ThinkTechnically.github.io/
+│
+├── index.html              # Homepage
+├── about.html              # About page
+├── videos.html             # Video gallery
+├── blog.html               # Blog page
+├── 404.html                # Custom 404 page
+├── styles/
+│   ├── style.css           # Main CSS file
+│   ├── dark-mode.css       # Dark mode styles
+│   └── animations.css      # Animation styles
+├── scripts/
+│   ├── script.js           # Main JavaScript file
+│   └── dark-mode.js        # Dark mode toggle
+├── images/                 # All images (logo, banners, etc.)
+│   ├── logo.png
+│   ├── banner.jpg
+│   └── thumbnails/
+├── blog/                   # Blog posts (optional)
+│   ├── post1.html
+│   ├── post2.html
+│   └── ...
+└── README.md               # Repository description

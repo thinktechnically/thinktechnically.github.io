@@ -5,24 +5,50 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Blog - Think Technically</title>
     <link rel="stylesheet" href="styles/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
 <body>
-    <header class="hero">
-        <div class="hero-content">
-            <h1>Blog</h1>
-            <p>Read my latest tech articles and tutorials.</p>
+    <!-- Navigation Bar -->
+    <nav class="glass-nav">
+        <div class="logo">
+            <img src="images/logo.png" alt="Think Technically Logo">
         </div>
-    </header>
+        <ul class="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="videos.html">Videos</a></li>
+            <li><a href="blog.html">Blog</a></li>
+            <li><a href="about.html">About</a></li>
+        </ul>
+        <div class="menu-toggle" id="mobile-menu">
+            <span class="bar"></span>
+            <span class="bar"></span>
+            <span class="bar"></span>
+        </div>
+    </nav>
 
-    <section id="blog-posts" class="section">
-        <article class="blog-post">
-            <h2>10 Tips for Learning Python</h2>
-            <p>Published on: October 10, 2023</p>
-            <p>Here are some tips to help you master Python...</p>
-            <a href="blog/post1.html" class="cta-button">Read More</a>
-        </article>
+    <!-- Blog Section -->
+    <section id="blog" class="section">
+        <h2 class="section-title">Blog</h2>
+        <div class="blog-grid" style="display: grid; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); gap: 20px;">
+            <!-- Blog Post 1 -->
+            <article class="blog-post glassmorphism" style="padding: 20px; border-radius: 10px;">
+                <h3>10 Tips for Learning Python</h3>
+                <p>Published on: October 10, 2023</p>
+                <p>Here are some tips to help you master Python...</p>
+                <a href="blog/post1.html" class="cta-button">Read More</a>
+            </article>
+
+            <!-- Blog Post 2 -->
+            <article class="blog-post glassmorphism">
+                <h3>Top 5 Tech Trends in 2023</h3>
+                <p>Published on: October 5, 2023</p>
+                <p>Discover the latest trends shaping the tech industry...</p>
+                <a href="blog/post2.html" class="cta-button">Read More</a>
+            </article>
+        </div>
     </section>
 
+    <!-- Footer -->
     <footer>
         <p>Follow me on:
             <a href="https://youtube.com/@Think-Technically">YouTube</a> |
@@ -30,5 +56,7 @@
             <a href="https://instagram.com/yourhandle">Instagram</a>
         </p>
     </footer>
+
+    <script src="scripts/script.js"></script>
 </body>
 </html>
